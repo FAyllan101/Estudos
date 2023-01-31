@@ -1,0 +1,51 @@
+<p>
+    <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" 
+    alt="Muro da Cidade"
+    width="513" height="342"
+    title="Muro da Cidade por Tarso Bessa">
+</p>
+<p>
+    <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" 
+    alt="Intro Co3er" height="342">
+</p>
+<p>
+    <img src="http://files.cod3r.com.br/curso-web/imagem3.png" 
+    alt="Rio de Janeiro"
+    height="342">
+</p>
+<p class="texto">
+    <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" 
+        alt="Avatar" height="50" align="left">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi dolorem eaque doloribus voluptate expedita et nisi facere rem, tempora dolores temporibus voluptates dolorum vero illo tenetur sit minus harum deserunt!
+</p>
+
+<!-- imagem a partir do css -->
+<p class="cidade"></p>
+
+<!-- varias imagens diferentes para mostrar ou não -->
+<p>
+    <picture>
+        <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png"
+        media="(min-width: 600px)">
+    </picture>
+</p>
+
+<style>
+    .texto{
+        width: 400px;
+
+    }
+
+    .texto img{
+        margin-right:12px ;
+    }
+/* imagem pelo css */
+    .cidade {
+        width: 513px;
+        height: 342px;
+        background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200%;
+    }
+</style>
