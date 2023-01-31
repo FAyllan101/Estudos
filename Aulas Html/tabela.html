@@ -1,0 +1,60 @@
+
+<table >
+    <caption>Produtos</caption> 
+    <thead>
+            <!-- cabeçalho -->
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+    </thead>
+    <tbody>
+        <!-- linhas -->
+        <tr> 
+            <!-- dados para cada linha -->
+            <td>ipad</td>
+            <td>3200,00</td>
+            <td>5</td>  
+            <td>16000</td>
+        </tr>
+        <tr>
+            <td>iphone</td>
+            <td>3600,00</td>
+            <td>3</td>  
+            <td>18000,00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <!-- rodape -->
+        <tr>
+            <td colspan="3">Total</td> <!--seleciona a quantidade de colunas ocupadas ou linha pelo rowspan-->
+            <td>38892,00</td>
+        </tr>
+    </tfoot>
+</table>
+
+<!-- estilo para tabelas -->
+<style>
+    table{
+        border-collapse: collapse;
+
+    }
+
+    th,td{
+        padding: 10px;
+    }
+
+    thead tr{
+        border-bottom: solid 3px #444;
+    }
+
+    tbody tr:hover{
+        background-color: antiquewhite;
+    }
+
+    tfoot{
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>
