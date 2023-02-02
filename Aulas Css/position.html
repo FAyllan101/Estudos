@@ -5,7 +5,67 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div{
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #333;
+        }
+        .static{
+            /* não considera posições*/
+            top: 100px;
+            left: 100px;
+            right: 50px;
+            bottom: 25px;
+            background-color: aquamarine;
+        }
+        .fixed{
+            /* leva em consideração as posiçoes  e o elemento fica fixo*/
+            position: fixed;
+            background-color: gold;
+            right: 2px;
+            bottom: 58px;
+        }
+
+        .relative1{
+            /* leva em consideração o elemento anterioe */
+            position: relative;
+            left: 27px;
+            top: 17px;
+            background-color: indianred;
+        }
+
+        .absolute1{
+            /* relação absoluta com a pagina */
+            position: absolute;
+            left: 255px;
+            top: 249px;
+            background-color: snow;
+        }
+
+        .relative2{
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+        }
+        .absolute2{
+            /* absoluto ao elemento pai,quando esse existe E O MESMO É RELATIVE . Ex: div dentro de div */
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+        }
+        .sticky {
+            /* quando chega onde determinou ele 'gruda' no lugar */
+            position: -webkit-sticky;
+            position: sticky;
+            background-color: #453;
+            top: 10px;
+        }
+    
     </style>
 </head>
 

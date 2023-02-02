@@ -12,6 +12,26 @@
             border: solid 5px;
             display: none;
         }
+
+        /* definindo e usando media query,usando em responsividade */
+        /* se o display for menor que o estipulado não aparece */
+        @media (max-width:600px){
+            .muito-pequeno{
+                display: block;
+            }
+        }
+        /* media maxima + orientação */
+        @media (max-width:1000px),(orientation:portrait){
+            .pequeno-retrato{display: block;}
+        }
+
+        /* largura minima e máxima*/
+
+        @media (min-width:500px) and  (max-width:1000px){
+            .intervalo {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
