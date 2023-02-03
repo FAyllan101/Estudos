@@ -8,9 +8,231 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <style>
-        html{
-            margin: ;
+        /* minha resposta */
+        /* html{
+            margin: 0px;
+            font-family: Oswald,sans-serif;
         }
+
+        .cabecalho{
+            margin: 0px;
+            display: inline-block;
+            position: absolute;
+            background: lightblue;
+            height: 85px;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+        }
+
+        .logo{
+            background-color: black;
+            height: 80px;
+        }
+
+        img{
+            
+            position: relative;
+            margin: 10px;
+            width: 250px;
+            height: 50px;
+        }
+
+        button{
+                position: absolute;
+                display: flex;
+                top: 100px;
+                right: 40px;
+        }
+
+        .menu{  
+            border: solid 1px gray;
+                position: absolute;
+                top: 20px;
+                left: 300px;
+                text-decoration: none;
+                height: 50px;
+                width: 500px;
+                color: white;
+                padding: 0px;
+        }
+
+        a{
+            
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            gap: 10px;
+        }
+        ul a{
+                
+                padding: 0px;
+                display: block;
+                text-decoration: none;
+                color: white;
+        }
+        li{
+            display: inline;
+        }
+
+        li a{
+                
+                position: relative;
+                display: block;
+                gap: 15px;
+                text-decoration: none;
+                color: white;
+                font-size:25px;
+        }
+
+
+        .autenticacao{
+            
+            display: inline;
+            position: absolute;
+            top:25px;
+            right: 20px;
+            font-size:25px;
+            gap: 15px;
+        }
+
+        .destaque{
+            background-color: blueviolet;
+            color: white;
+            text-decoration: none;
+            border:5px;
+            border-radius: 15px;
+            padding: 5px;
+        }
+        .destaque:hover{
+            background-color: blue;
+        }
+        #login {
+            padding: 5px;
+            position: relative;
+            right: 5px;
+            border-radius: 5px;
+        }
+
+        #login:hover{
+            background-color: blue;
+
+        }
+        #inicio {
+            display: block;
+            border: solid 1px red;
+            width: 80px;
+            position: relative;
+            left: 0px;
+            align-items: center;
+            justify-content: center;
+
+        }  */
+
+        /* RESPOSTA CURSO */
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+            font-family: 'Oswald',sans-serif;
+            background-color: lightgray;
+        }
+        .cabecalho{
+            background: #333;
+            border-bottom: solid 5px lightblue;
+            height: 85px;
+            box-sizing: content-box;
+        }
+
+        .logo{
+            display: inline-block;
+            height: 80px;
+            padding: 15px;
+        }
+
+        .logo img{
+            height: 100%;
+        }
+        
+        .menu-toggle{
+            float: right;
+            color: #eee;
+            background-color: #555;
+            border: solid 1px #777;
+            border-radius: 5px;
+            height: 40px;
+            padding: 10px 20px;
+            margin: 20px 15px;
+        }
+        .menu{
+            display: inline-block;
+            vertical-align: top;
+            height: 80px;
+            padding: 25px;
+        }
+
+        .menu ul{
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .menu li{
+            display: inline-block;
+    
+        }
+
+        .menu a {
+            padding: 15px;
+        }
+
+        .cabecalho a {
+            text-decoration: none;
+            color:white;
+            font-size: 1.3em;
+        }
+        .autenticacao{
+            float: right;
+            height: 80px;
+            padding: 25px;
+        }
+
+        .menu a:hover,
+        .menu a.selected{
+            background-color: aqua;
+            color: black;
+        }
+
+        .botao{
+            border-radius: 30px;
+            padding:10px 20px;
+            margin: 10px;
+        }
+        .destaque{
+            background-color: blueviolet;
+            color: white;
+        }
+
+        @media(min-width:679px){
+            .menu-toggle{
+                display: none;
+            }
+        }
+
+        @media(max-width:680px){
+            .menu{
+                display: none;
+            }
+        }
+
+        @media(max-width:910px){
+            .autenticacao{
+                display: none;
+            }
+        }
+
     </style>
 </head>
 
@@ -27,27 +249,34 @@
         <nav class="menu">
             <ul>
                 <li>
-                    <a href="#inicio">Início</a>
+                    <a href="#inicio" id="inicio">Início</a>
                 </li>
                 <li>
-                    <a href="#cursos">Cursos</a>
+                    <a href="#cursos" id="cursos">Cursos</a>
                 </li>
                 <li>
-                    <a href="#sobre">Sobre</a>
+                    <a href="#sobre"  id="sobre">Sobre</a>
                 </li>
                 <li>
-                    <a href="#contato">Contato</a>
+                    <a href="#contato" id="con">Contato</a>
                 </li>
             </ul>
         </nav>
         <aside class="autenticacao">
-            <a href="#login">Login</a>
+            <a href="#login" id="login">Login</a>
             <a href="#registar" class="botao destaque">Registrar</a>
         </aside>
     </header>
 
     <script>
-        // ...
+        window.onhashchange = function(e){
+            const oldURL = e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+            const oldMenu = document.querySelector(`.menu a[href='#${oldURL}']`)
+            const newMenu = document.querySelector(`.menu a[href='#${newURL}']`)
+            oldMenu && oldMenu.classList.remove('selected')
+            newMenu && newMenu.classList.add('selected')
+        }
     </script>
 </body>
 
