@@ -7,6 +7,61 @@
     <link rel="stylesheet" href="css/tag.css">
     <style>
         /* ... */
+        .big{
+            font-size: 1.5em;;
+        }
+        .flex-container{
+            display: flex;
+            /* como mudar o eixo */
+            flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: row-reverse;
+            flex-direction: row;
+            width: 50%;
+            height: 200px;
+            /* quebra de linha */
+            flex-wrap: wrap;
+            /* inverte as linhas */
+            flex-wrap: wrap-reverse;
+            /* flex wrap + direction */
+            flex-flow: row wrap;
+            flex-flow: column-reverse wrap;
+            flex-flow: row wrap;
+
+            /* organizar os itens */
+
+            /* começo  */
+            justify-content: flex-start;
+            /* final */
+            justify-content: en
+            d;
+            /* centralizar */
+            justify-content: center;
+            /* espaço entre os elementos */
+            justify-content: space-around;
+            /* espaço entre os elementos  */
+            justify-content: space-between;
+
+            /* cross axis */
+            /* alinhar com o eixo cruzado */
+            height: 400px;
+            align-items: stretch;
+            /* pela linha de base da fonte */
+            align-items: baseline;
+            /* pelo inicio do flex */
+            align-items: start;
+            align-items: center;
+
+            /* mais de uma linha */
+            /* inicio do flex container */
+            align-items:flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-around;
+            align-content: space-between;
+
+        }
+
     </style>
 </head>
 
