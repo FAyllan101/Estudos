@@ -54,6 +54,58 @@
         /* ==================== */
         /* Solução com Flex Box */
         /* ==================== */
+        .cabecalho{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu{
+            flex-grow: 10;
+        }
+
+        .logo{
+            display: flex;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .menu ul{
+            gap: 15px;
+            display: flex;
+            width: 400px;
+            flex-direction: row;
+            flex-basis: 50px;
+            margin-top: 15px;
+            padding: 3px;
+            /*  */
+            justify-content: center;
+            
+            
+        }
+
+        .menu li{
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+            /*  */
+            padding: 0px;
+            
+        }
+        a{
+            /*  */
+            display: flex;
+        }
+
+        .autenticacao{
+            display: flex;
+    
+            flex-direction: end ;
+            position: relative;
+            right: 15px;
+            justify-content: center;
+            align-items: center;
+        }
+
     </style>
 </head>
 

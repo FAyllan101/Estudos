@@ -6,7 +6,23 @@
     <title>Flexbox #03</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-container div{
+            /* tamanho base do item dentro do flexbox - NO MAIN AXIS */
+            flex-basis: 100px;
+        }
+        
+        .flex-container div:nth-child(4){
+            /* atalho flex=> define o grwth,shirnk e basis*/
+            /* grow shrink basis */
+            flex-basis: 10px;
+            flex: 3 6 100px;
+        }
+
     </style>
 </head>
 
