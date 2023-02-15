@@ -1,0 +1,12 @@
+const imprimirResultado = function(nota) {
+    if (nota>=7){
+        console.log('Aprovado!!')
+    } else {
+        console.log('Reprovado!!')
+    }
+}
+
+imprimirResultado(7)
+imprimirResultado(6.9)
+imprimirResultado(7.1)
+imprimirResultado('epa') // cuidado com a linguuagem fracamente tipada 
