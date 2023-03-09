@@ -7,7 +7,6 @@ Array.prototype.map2 = function(callback){
     return newArray
 }
 
-
 const carrinho = [
     '{"nome":"borracha","preco": 3.50}',
     '{"nome":"caderno","preco": 13.90}',
