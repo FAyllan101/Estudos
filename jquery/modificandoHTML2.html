@@ -17,6 +17,35 @@
     <p class='numero'>5</p>
 
     <script>
-        // ...
+        $('#div1').append(', 2')
+        $('#div1').prepend('0, ')
+
+        // append to é ao contrario,conteudo que quer colocar e onde
+
+        $('<span>,3 </span>').appendTo('#div1')
+        $('<span>-1, </span>').prependTo('#div1')
+
+        $('#div2').before('<p>Antes 2</p>')
+        $('#div').after('<p>Depois 2 </p>')
+
+        $('<p>Depois de 3</p>').insertAfter('#div3')
+        $('<p>Antes de 3</p>').insertBefore('#div3')
+
+        // envolver com uma div
+        $('p.numero').wrap('<div>')// divs separadas
+        //$('p.numero').wrapAll('<div>') // div juntas 
+        $("#div4").empty()
+        // voltar para o anterior
+        $('#div3,#div4').prev().remove()
+
+        // substituir
+        // todos 
+        // $('<div> Substituto </div>').replaceAll('body > p')
+        //$('body >p').replaceWith('<div> Substituto</div>')
+        // com callback
+        $('body >p').replaceWith(function(){
+            return $('<div>').html($(this).html())
+        })
+
     </script>
 </body>
