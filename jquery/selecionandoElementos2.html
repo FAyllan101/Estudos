@@ -82,8 +82,31 @@
     </footer>
     <script>
         const comBorda = { 'border': 'solid 8px orange'}
-        const semborda = { 'border': 'none' }
+        const semBorda = { 'border': 'none' }
 
-        $('a')
+        //parent
+        $('a[href="#link3"]').parent().css(comBorda).css(semBorda)
+        // elemento anterior 
+        $('li:last').prev().css(comBorda).css(semBorda)
+        // proximo elemento
+        $('a[href="#link1"]').parent().next().css(comBorda).css((semBorda))
+        //todos os parents
+        $('a[href="#link1"]').parents().css(comBorda).css(semBorda)
+        //parents até onde selecionei 
+        $('a[href="#link1"]').parentsUntil('body').css(comBorda).css(semBorda)
+        //filhos
+        $('main').children().css(comBorda).css(semBorda)
+        // procurar 
+        $('body').find('a').css(comBorda).css(semBorda)
+
+        // misturando DOM com jQuery
+        const elementoDom = document.getElementsByClassName('menu')
+        $(elementoDom).css(comBorda)
+
+        // percorrer elementos
+        $('main').children().each((indice,elemento) => $(elemento).css(comBorda)).css(semBorda)
+        $('li').each((i,e) => {
+            $(e).css(comBorda)
+        })
     </script>
 </body>
